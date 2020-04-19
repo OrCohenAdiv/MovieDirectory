@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:backgroundTint="#e0FFFFFF"
+    android:backgroundTintMode="src_over"
+    tools:context=".Activities.MovieDetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="368dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/movieImageIDDets"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:background="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/movieTiteleIDDets"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/movieImageIDDets"
+                        android:paddingLeft="5dp"
+                        android:text="Movie Title"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/movieReleasedIDDets"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/movieTiteleIDDets"
+                        android:layout_toRightOf="@+id/movieImageIDDets"
+                        android:padding="5dp"
+                        android:text="Released Date: " />
+
+                    <TextView
+                        android:id="@+id/movieCatIDDets"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/movieReleasedIDDets"
+                        android:layout_centerHorizontal="true"
+                        android:layout_toRightOf="@+id/movieImageIDDets"
+                        android:paddingLeft="5dp"
+                        android:text="Category: " />
+
+
+                    <TextView
+                        android:id="@+id/runtimeDets"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/movieCatIDDets"
+                        android:layout_toRightOf="@+id/movieImageIDDets"
+                        android:paddingLeft="5dp"
+                        android:text="Runtime: " />
+
+                    <TextView
+                        android:id="@+id/productionCompaniesByDets"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/movieImageIDDets"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:text="Production Companies: " />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="368dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/budgetDets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Budget" />
+
+                <TextView
+                    android:id="@+id/voteAverageDet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/budgetDets"
+                    android:padding="5dp"
+                    android:text="Vote Average: " />
+
+                <TextView
+                    android:id="@+id/voteCountDet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/voteAverageDet"
+                    android:padding="5dp"
+                    android:text="Vote Count: " />
+
+                <TextView
+                    android:id="@+id/plotDet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/voteCountDet"
+                    android:padding="5dp"
+                    android:text="Plot: " />
+
+                <TextView
+                    android:id="@+id/revenueDet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/plotDet"
+                    android:padding="5dp"
+                    android:text="Box Ofiice: " />
+
+                <TextView
+                    android:id="@+id/OfficialTrailerTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/revenueDet"
+                    android:padding="5dp"
+                    android:text="Official Trailer: "
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/theTrailer"
+                android:layout_width="match_parent"
+                android:layout_height="302dp"
+
+
+                app:autoPlay="false"
+                app:showFullScreenButton="false">
+
+            </com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

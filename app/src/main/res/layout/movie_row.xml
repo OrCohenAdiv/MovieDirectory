@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/imageID"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@color/cardview_dark_background" />
+
+            <TextView
+                android:id="@+id/movieTiteleID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@id/imageID"
+                android:paddingLeft="5dp"
+                android:text="Movie Titele"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/movieReleasedID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/movieTiteleID"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@id/imageID"
+                android:paddingLeft="5dp"
+                android:text="Released" />
+
+            <TextView
+                android:id="@+id/movieRating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/movieReleasedID"
+                android:layout_toRightOf="@id/imageID"
+                android:drawableLeft="@android:drawable/btn_star_big_on"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="Rating: " />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
